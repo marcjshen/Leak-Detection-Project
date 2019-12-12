@@ -4,37 +4,34 @@ import wave
 import datetime
 import time
 import os
-#from script 2:
+
+# From Script 2:
 from scipy.io import wavfile
 from scipy.fftpack import fft
 import numpy as np
 import glob
-import os
+#import os
 import RPi.GPIO as GPIO
-import time
-import pyaudio
-import wave
+#import time
+#import pyaudio
+#import wave
 import sounddevice as sd
 import soundfile as sf
 #import ConfigParser
 import RPi.GPIO as GPIO
 import requests
 import json
+
 # DEFAULTS
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 48000
 CHUNK = 8192
-#adjust from 1-10 min to see what works best
-#now, it is more important that all 4 show leaks
 RECORD_SECONDS = 10
 RECORD_PERIODS = 4
 FINAL_LEAKS = 4
-
 TARGET_DIR = "/Desktop/home/pi/"
-
 API_KEY = 'o.F6iN9x3T5spuMqBgaIbKCcuWDAxk1DFj'
-#change to 10 sec to see if messaging works (difficulty with pushbullet)
 
 def pushMessage(title, body):
     data = {
@@ -57,19 +54,20 @@ def record_audio(format, channels, rate, seconds, framers_per_buffer):
                         input=True,
                         framers_per_buffer=frames_per_buffer)
 
-    # start Recording
+    # Start recording
     print("recording")
     frames = []
     for i in range(0, int(rate / frames_per_buffer * seconds)):
         data = stream.read(frames_per_buffer, exception_on_overflow = False)
         frames.append(data)
         
-    # stop Recording
+    # Stop recording
     stream.stop_stream()
     stream.close()
     audio.terminate()
     print("stop recording")
-    # get name and location of file to create
+
+    # Get name and location of file to create
     filename = "/home/pi/Desktop/myfile.wave"
     # write data to audio file
     wave_file = wave.open(filename, 'wb')
@@ -125,6 +123,7 @@ def evalFile(filename):
 
 record_counter = 0
 leak_counter = 0
+
 def leakperhour(leak):
     """
     Given a boolean indicating whether or not there is a leak, adds to a leak_counter
@@ -158,12 +157,13 @@ while True:
     record_counter = 0
     leak_counter = 0
     for i in range(RECORD_PERIODS):
-        # record audio
+        # Record audio
         record_counter += 1
         record_audio(FORMAT, CHANNELS, RATE, RECORD_SECONDS, CHUNK)
-        #run analysis on audio
+        
+        # Run analysis on audio
         leakperhour(evalFile("/home/pi/Desktop/myfile.wav"))
         print(leak_counter)
         time.sleep(5)
     sendalert(leak_counter == record_counter)
-        #something to send a message to FE&P
+        # something to send a message to FE&P
