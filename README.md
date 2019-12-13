@@ -1,4 +1,4 @@
-# Leak Sensing Project
+# Leak Sensing Device
 
 *ENGI 120: Freshman Design Course, Fall 2019*
 
