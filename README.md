@@ -12,3 +12,7 @@ Each year, Rice University wastes approximately 40 million gallons of water due 
 - Adafruit Mini USB Microphone
 - Waterproof Polycarbonate Enclosure
 - 
+
+## Capabilities
+
+## Future Plans
