@@ -1,6 +1,7 @@
 # Leak Sensing Project
 
 *ENGI 120: Freshman Design Course, Fall 2019*
+
 Bavan Rajan, Marc Shen, Ananya Vaidya, & Claire Xu
 
 ## Problem Statement
