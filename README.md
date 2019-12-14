@@ -8,7 +8,7 @@ Bavan Rajan, Marc Shen, Ananya Vaidya, & Claire Xu
 Each year, Rice University wastes approximately 40 million gallons of water due to pipe leakage, and this costs the university up to $422,400 annually. The task was to design a portable leak-detecting device for sewer grates on Rice's campus. This device would alert Rice's Facilities Engineering & Planning department of water leaks in main pipelines, and would be accurate, durable, and easy to use.
 
 ## Components
-- Raspberry Pi Model 3A+ (plus case)
+- Raspberry Pi Model 3A+ (with case)
 - Adafruit Mini USB Microphone
 - Waterproof Polycarbonate Enclosure
 - 
