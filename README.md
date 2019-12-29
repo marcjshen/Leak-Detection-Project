@@ -10,12 +10,25 @@ Each year, Rice University wastes approximately 40 million gallons of water due 
 ## Components
 - Raspberry Pi Model 3A+ (with case)
 - Adafruit Mini USB Microphone
+- 5k mAh Battery Pack
+- SanDisk Ultra 16GB SD Card
+- 90-degree USB cable
 - Waterproof Polycarbonate Enclosure
-- 
+- 6.55 cm steel carabiner
+- 11.5 cm steel S-hook
+- 1.524 meter steel chain
+- 0.305 meter chain
 
 ## Capabilities
+- Receiving and recording sound
+  - sound data is saved as amplitude vs. time in a 5 minute .wav file
+- Analyzing sound
+  - FFT is used to convert data to amplitude vs. frequency
+  - analyzes how much data falls within a given frequency range and determines if it meets the threshold set
+- Sending a wireless notification to a mobile device
+  - Pushbullet is used to communicate betweeen the Raspberry Pi and a mobile device
 
 ## Future Plans
 - adjust threshold and frequency range based on testing
 - implement methods of detecting other variables (eg. temperature, flow rate, moisture)
-- 
+- implement better power source 
