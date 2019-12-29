@@ -27,6 +27,9 @@ Each year, Rice University wastes approximately 40 million gallons of water due 
   - analyzes how much data falls within a given frequency range and determines if it meets the threshold set
 - Sending a wireless notification to a mobile device
   - Pushbullet is used to communicate betweeen the Raspberry Pi and a mobile device
+ 
+## Prototype Demonstration
+https://www.youtube.com/watch?v=T0wH7zHn6ds&t=39s
 
 ## Future Plans
 - adjust threshold and frequency range based on testing
