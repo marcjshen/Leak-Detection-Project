@@ -29,7 +29,7 @@ Each year, Rice University wastes approximately 40 million gallons of water due 
   - Pushbullet is used to communicate betweeen the Raspberry Pi and a mobile device
  
 ## Prototype Demonstration
-https://www.youtube.com/watch?v=T0wH7zHn6ds&t=39s
+https://www.youtube.com/watch?v=T0wH7zHn6ds
 
 ## Future Plans
 - adjust threshold and frequency range based on testing
